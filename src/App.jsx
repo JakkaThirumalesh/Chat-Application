@@ -12,7 +12,7 @@ const cookies = new Cookies();
 function ChatApp() {
   const [isAuth, setIsAuth] = useState(cookies.get("auth-token"));
   const [isInChat, setIsInChat] = useState(null);
-  const [room, setRoom] = useState("");
+  const [room, setRoom] = useState(crypto.randomUUID());
   const [userDetails, setUserDetails] = useState([]);
   const signInWithGoogle = async () => {
     try {
